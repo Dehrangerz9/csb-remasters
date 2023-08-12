@@ -1,0 +1,49 @@
+{
+  "id": "csb-remasters",
+  "title": "CSB-Remasters",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "custom-system-builder",
+        "type": "system",
+        "compatibility": {}
+      }
+    ]
+  },
+  "description": "Um módulo feito para utilizar o sistema do Remasters no Foundry utilizando o CSB",
+  "authors": [
+    {
+      "name": "Ranger_player",
+      "discord": "ranger_player"
+    }
+  ],
+  "packs": [
+    {
+      "name": "items",
+      "label": "items",
+      "path": "packs/items",
+      "type": "Item",
+      "system": "custom-system-builder",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "fichas",
+      "label": "fichas",
+      "path": "packs/fichas",
+      "type": "Actor",
+      "system": "custom-system-builder",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ]
+}

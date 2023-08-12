@@ -1,0 +1,138 @@
+.rolagemHeader {
+    word-break: break-all;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.rolagemBody {
+    margin-top: 5px;
+}
+
+.rolagemItem {
+    display: inline;
+    
+    font-size: smaller;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    margin-right: 5px;
+}
+
+.attackRollTitle{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.weaponTraitList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.weaponTrait{
+    background-color: rgb(1, 1, 73);
+    padding: 0px 5px 0px 5px;
+    color: white;
+    border: 1px solid black;
+}
+
+.attackRoll{
+
+}
+
+
+.rollTableRoll{
+    font-size: x-large;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.dropdownRow{
+    display: none;
+}
+
+.attackRoll:hover  .dropdownRow{
+    display: block;
+}
+
+.attackOptions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.normalDamage{
+    text-align: center;
+    font-size: medium;
+    font-weight: 300;
+}
+
+.normalDamage a {
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.habilidadeTraitList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.habilidadeTrait {
+    background-color: rgb(1, 1, 73);
+    padding: 0px 5px 0px 5px;
+    color: white;
+    border: 1px solid black;
+}
+
+.habilidadeCaracteristicasLista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.habilidadeCaracteristica {
+    color: black;
+    border-right: 1px solid black;
+    padding: 1px;
+    padding-right: 2px;
+    font-size: smaller;
+}
+
+.habilidadeCaracteristica:last-child {
+    border-right: 0px solid black;
+}
+
+.habilidadeBotoesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.habilidadeBotaoLinha {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.habilidadeBotao {
+    display: flex;
+    justify-content: space-around;
+    flex: 100%;
+    text-align: center;
+    font-size: medium;
+    font-weight: 300;
+}
+
+.habilidadeBotao a {
+    flex: 100%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+}
