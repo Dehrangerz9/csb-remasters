@@ -46,5 +46,6 @@
       }
     }
   ],
-  "url": "https://github.com/Dehrangerz9/csb-remasters"
+  "url": "https://github.com/Dehrangerz9/csb-remasters",
+  "manifest":"https://github.com/Dehrangerz9/csb-remasters/releases/latest/download/module.json"
 }
