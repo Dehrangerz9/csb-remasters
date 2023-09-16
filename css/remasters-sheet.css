@@ -1,60 +1,38 @@
-.rolagemHeader {
-    word-break: break-all;
-    width: 100%;
-    margin-bottom: 5px;
-}
-
-.rolagemBody {
-    margin-top: 5px;
-}
-
-.rolagemItem {
-    display: inline;
-    
-    font-size: smaller;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 2px;
-    margin-right: 5px;
-}
-
-.attackRollTitle{
+.attackRollTitle {
     text-align: center;
     font-weight: bolder;
 }
 
-.weaponTraitList{
+.weaponTraitList {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
 }
 
-.weaponTrait{
+.weaponTrait {
     background-color: rgb(1, 1, 73);
     padding: 0px 5px 0px 5px;
     color: white;
     border: 1px solid black;
 }
 
-.attackRoll{
-
-}
+.attackRoll {}
 
 
-.rollTableRoll{
+.rollTableRoll {
     font-size: x-large;
+    font-weight: 200;
     text-align: center;
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
     border-radius: 10px;
-    margin-top: 5px;
 }
 
-.dropdownRow{
+.dropdownRow {
     display: none;
 }
 
-.attackRoll:hover  .dropdownRow{
+.attackRoll:hover .dropdownRow {
     display: block;
 }
 
@@ -64,7 +42,7 @@
     gap: 10px;
 }
 
-.normalDamage{
+.normalDamage {
     text-align: center;
     font-size: medium;
     font-weight: 300;
@@ -135,4 +113,27 @@
     text-decoration: none;
     padding: 5px;
     border-radius: 10px;
+}
+
+.content-link {
+    background: #d18d8d00 !important;
+    border: 0px solid black !important;
+    font-size: larger;
+}
+
+.content-link>img {
+    max-width: 25px !important;
+    max-height: 25px !important;
+}
+
+.rolagemHeader {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.rolagemItem {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 3px;
 }
