@@ -1,24 +1,3 @@
-2023/09/16-00:06:29.859 30a4 Recovering log #88
-2023/09/16-00:06:30.065 30a4 Delete type=0 #88
-2023/09/16-00:06:30.065 30a4 Delete type=3 #86
-2023/09/16-01:20:43.587 82c Level-0 table #93: started
-2023/09/16-01:20:43.714 82c Level-0 table #93: 806721 bytes OK
-2023/09/16-01:20:43.754 82c Delete type=0 #91
-2023/09/16-01:41:45.427 82c Level-0 table #95: started
-2023/09/16-01:41:45.572 82c Level-0 table #95: 720336 bytes OK
-2023/09/16-01:41:45.651 82c Delete type=0 #92
-2023/09/16-01:42:08.088 82c Compacting 1@1 + 1@2 files
-2023/09/16-01:42:08.318 82c Generated table #96@1: 245 keys, 759496 bytes
-2023/09/16-01:42:08.318 82c Compacted 1@1 + 1@2 files => 759496 bytes
-2023/09/16-01:42:08.360 82c compacted to: files[ 0 0 1 0 0 0 0 ]
-2023/09/16-01:42:08.361 82c Delete type=2 #93
-2023/09/16-01:42:08.361 82c Delete type=2 #95
-2023/09/16-01:51:51.777 82c Level-0 table #98: started
-2023/09/16-01:51:51.963 82c Level-0 table #98: 736439 bytes OK
-2023/09/16-01:51:52.012 82c Delete type=0 #94
-2023/09/16-01:52:12.860 82c Compacting 1@1 + 1@2 files
-2023/09/16-01:52:13.064 82c Generated table #99@1: 245 keys, 792041 bytes
-2023/09/16-01:52:13.064 82c Compacted 1@1 + 1@2 files => 792041 bytes
-2023/09/16-01:52:13.123 82c compacted to: files[ 0 0 1 0 0 0 0 ]
-2023/09/16-01:52:13.124 82c Delete type=2 #96
-2023/09/16-01:52:13.125 82c Delete type=2 #98
+2023/11/09-06:38:51.091 2920 Recovering log #152
+2023/11/09-06:38:51.203 2920 Delete type=0 #152
+2023/11/09-06:38:51.203 2920 Delete type=3 #150
