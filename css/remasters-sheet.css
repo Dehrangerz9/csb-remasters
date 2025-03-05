@@ -1,139 +1,383 @@
-.attackRollTitle {
-    text-align: center;
-    font-weight: bolder;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('./aba-acoes.css');
+@import url('./chat-messages.css');
+
+/*css focus*/
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="time"]:focus, input[type="search"]:focus{
+  box-shadow: none;
+  color: #006FC0;
 }
 
-.weaponTraitList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
+/*CSS FOR SHEET LAYOUT*/
+
+.sheet{
+    font-family: 'Outfit', 'Consolas', Sans-Serif
 }
 
-.weaponTrait {
-    background-color: rgb(1, 1, 73);
-    padding: 0px 5px 0px 5px;
-    color: white;
-    border: 1px solid black;
+.window-app .window-content:has(.custom-system-actor){
+  background: none;
+  background-color: rgb(235, 235, 235);
 }
 
-.attackRoll {}
-
-
-.rollTableRoll {
-    font-size: x-large;
-    font-weight: 200;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid black;
-    border-radius: 10px;
+.custom-system-actor-content:has(.player-sheet),.custom-system-actor-content:has(.npc-sheet) {
+  flex-direction: row;
+  gap: 5px;
 }
 
-.dropdownRow {
-    display: none;
+.sheet:has(.player-sheet) header.sheet-header,.sheet:has(.npc-sheet) header.sheet-header{
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex: 20%;
+  gap: 10px;
 }
 
-.attackRoll:hover .dropdownRow {
-    display: block;
+.sheet:has(.player-sheet) .custom-system-customBody,.sheet:has(.npc-sheet) .custom-system-customBody {
+  flex: 80%;
 }
 
-.attackOptions {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.custom-system-panel {
+  margin: 0;
 }
 
-.normalDamage {
-    text-align: center;
-    font-size: medium;
-    font-weight: 300;
+/*CSS FOR THE LATERAL PART OF THE SHEET*/
+
+.sheet-header {
+  height: fit-content;
 }
 
-.normalDamage a {
-    text-decoration: none;
-    padding: 5px;
-    border-radius: 10px;
+.sheet:has(.player-sheet) .sheet-header .profile-img-container,.sheet:has(.npc-sheet) .sheet-header .profile-img-container{
+  width: 100% !important;
+  border: 3px solid #006FC0;
+}
+.sheet:has(.player-sheet) .sheet-header .header-fields,.sheet:has(.npc-sheet) .sheet-header .header-fields{
+  border: 3px solid #006FC0;
 }
 
-.habilidadeTraitList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
+.sheet .custom-system-actor header.sheet-header h1 input{
+  border: 0;
+  border-bottom: 3px solid #006FC0;
+  margin: 0;
+  font-weight: 700;
+  border-radius: 0;
+  background-color: white;
+  color: #006FC0;
+
 }
 
-.habilidadeTrait {
-    background-color: rgb(1, 1, 73);
-    padding: 0px 5px 0px 5px;
-    color: white;
-    border: 1px solid black;
+.sheet .custom-system-actor header.sheet-header h1 input:focus{
+  box-shadow: none;
 }
 
-.habilidadeCaracteristicasLista {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2px;
+.sheet-header-section {
+  margin: 0;
+  border-bottom: 3px solid #006FC0;
+  background-color: white;
+  padding: 3px 2px;
 }
 
-.habilidadeCaracteristica {
-    color: black;
-    border-right: 1px solid black;
-    padding: 1px;
-    padding-right: 2px;
-    font-size: smaller;
+.sheet-header-section > div{
+  margin: 0;
 }
 
-.habilidadeCaracteristica:last-child {
-    border-right: 0px solid black;
+.sheet-header-section .sheet-header-section-title {
+  margin-left: 5px;
 }
 
-.habilidadeBotoesContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.sheet-header-section .sheet-header-section-input input[type="text"]{
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #006FC0;
+  min-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  background-color: transparent;
 }
 
-.habilidadeBotaoLinha {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
+/*CSS FOR COMPONENTS*/
+
+.padding {
+  padding: 10px;
 }
 
-.habilidadeBotao {
-    display: flex;
-    justify-content: space-around;
-    flex: 100%;
-    text-align: center;
-    font-size: medium;
-    font-weight: 300;
+.padding-x {
+  padding: 0 10px;
 }
 
-.habilidadeBotao a {
-    flex: 100%;
-    text-decoration: none;
-    padding: 5px;
-    border-radius: 10px;
+.padding-y {
+  padding: 10px 0;
 }
 
-.content-link {
-    background: #d18d8d00 !important;
-    border: 0px solid black !important;
-    font-size: larger;
+.margin-x {
+  margin: 0 10px;
 }
 
-.content-link>img {
-    max-width: 25px !important;
-    max-height: 25px !important;
+.margin-y {
+  margin: 10px 0;
 }
 
-.rolagemHeader {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
+
+.flex-gap-10 {
+  gap: 10px;
 }
 
-.rolagemItem {
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-right: 3px;
+.flex-gap-15 {
+  gap: 15px;
 }
+
+.simple-input input{
+  border: 0;
+  border-bottom: 1px solid #006FC0;
+  border-radius: 0;
+}
+
+.simple-input input:focus {
+  box-shadow:none
+}
+
+.text-area {
+  background-color: rgba(0, 0, 0, 0.05);
+  min-height: 125px;
+}
+
+.simple-dropdown select{
+  border-radius: 0;
+  background-color: #006FC0;
+  color: white;
+}
+
+.simple-dropdown select:focus {
+  box-shadow: none;
+}
+
+.simple-dropdown option{
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+}
+
+.simple-dropdown option:hover{
+  background-color: #006FC0;
+  color: white;
+}
+
+/*CSS FOR THE MAIN PART OF THE SHEET*/
+.sheet-main-section section{
+  border: 3px solid #006FC0;
+}
+
+/*NAV*/
+
+.sheet-main-section nav.sheet-tabs {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.sheet-main-section nav.tabs{
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.sheet-main-section nav.sheet-tabs span {
+  padding: 10px 10px;
+  background-color: black;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 300;
+  transition: background-color 0.3s ease-in-out;
+}
+.sheet-main-section nav.sheet-tabs span:last-child {
+  font-size: 0.9rem;
+  margin-bottom: -3px;
+  margin-left: auto;
+}
+
+.sheet-main-section nav.sheet-tabs span:has(.active){
+  background-color: #006FC0;
+}
+
+.sheet-main-section nav.sheet-tabs span:hover{
+  background-color: #006FC0;
+  box-shadow: none;
+}
+
+.sheet-main-section nav.sheet-tabs .active{
+  box-shadow: none;
+}
+
+/*TABS*/
+
+.sheet-body-section {
+  background-color: white;
+}
+
+.attribute-card {
+  border: 1px solid #006FC0;
+}
+
+.attribute-card > div{
+  margin: 0;
+}
+
+.attribute-container {
+  gap: 10px;
+  padding: 0px 15px;
+}
+
+.attribute-input input, .attribute-input.display{
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  min-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: transparent;
+}
+
+.attribute-label {
+  background-color: #006FC0;
+  font-size: 1.1rem;
+  padding: 0px 5px;
+  color: white;
+}
+
+.skill-container {
+  background-color: white;
+  gap: 10px;
+  padding: 15px 15px;
+}
+.skill-container-col {
+  border: 2px solid #006FC0;
+}
+
+.skill-container-col-label {
+  margin: 0;
+  padding: 5px 0;
+  color: white;
+  background-color: #006FC0;
+}
+
+.skill-container-col-label h3 {
+  margin: 0;
+}
+
+.dynamic-item-container table span a.content-link{
+  background-color: transparent;
+  border: none;
+  font-weight: 300;
+  display: flex;
+  gap: 5px;
+  font-size: 1.1rem;
+}
+
+.dynamic-item-container table span a.content-link:hover{
+  text-shadow: 0 0 8px #006FC0;
+  color: #006FC0;
+} 
+
+:has(.dynamic-item-container) .custom-system-item-container-image{
+  margin: 0;
+  max-width: 25px;
+  max-height: 25px;
+}
+/*CSS FOR BARS*/
+
+.bar {
+  position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.bar .bar-display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  margin: 0;
+  display: flex;
+	align-items: center;
+	gap: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+
+.bar .bar-display div{
+	margin:0;
+}
+
+.bar .bar-display input,  .bar .bar-display .bar-label{
+  	font-weight: 600;
+  	border: none;
+  	background: transparent;
+  	color: white;
+  	font-size: 1.2rem;
+	margin: 0px;
+	width: 3.5rem;
+  text-align: center;
+}
+
+.bar .bar-display .bar-label {
+  width: auto;
+  padding: 0 5px;
+}
+
+.bar .bar-display input:focus{
+	box-shadow: none;
+}
+
+.bar .bar-display .temp-hp{
+	align-self: end;
+	width: 3rem;
+  margin-left: auto;
+  border: 1px solid black;
+  background-color: rgb(51 51 51 / 75%);
+}
+
+.bar .bar-display .temp-hp input{
+  color: rgb(177, 151, 4);
+}
+
+.bar .bar-display .separator  {
+	color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+	color: white;
+  padding: 0px 5px;
+  flex-grow: 0;
+}
+
+
+.bar .bar-meter {
+  margin: 0;
+  padding: 0;
+  width: calc(100% - 3.1rem);
+  border: 1px solid black;
+}
+
+.bar.reiki .bar-meter, .bar.capacidade-de-carga .bar-meter{
+  width: 100%;
+}
+
+.bar .bar-meter .custom-system-meter{
+  min-height: 25px;
+  border-radius: 0px;
+  width: 100%;
+  background-color: rgb(51 51 51 / 75%);
+}
+
+.bar .bar-meter .custom-system-meter .custom-system-meter-fill{
+  border-radius: 0px;
+}
+
+.bar.reiki .custom-system-meter-fill{
+  background-color: #006FC0 !important;
+}
+
+.bar.capacidade-de-carga .custom-system-meter-fill{
+  background-color:rgb(177, 64, 30) !important;
+}
+
+/*LEGACY CSS*/

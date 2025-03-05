@@ -1,7 +1,7 @@
 {
   "id": "csb-remasters",
   "title": "CSB-Remasters",
-  "version": "1.0.0",
+  "version": "2.0",
   "compatibility": {
     "minimum": "11",
     "verified": "12"
@@ -12,17 +12,71 @@
         "id": "custom-system-builder",
         "type": "system",
         "compatibility": {}
+      },
+      {
+        "id": "custom-system-builder-unstable",
+        "type": "system",
+        "compatibility": {}
+      },
+      {
+        "id": "custom-system-builder-beta",
+        "type": "system",
+        "compatibility": {}
+      }
+    ],
+    "requires": [
+      {
+        "id": "statuscounter",
+        "type": "module",
+        "compatibility": {}
       }
     ]
   },
   "description": "Um módulo feito para utilizar o sistema do Remasters no Foundry utilizando o CSB",
   "authors": [
     {
-      "name": "Ranger_player",
-      "discord": "ranger_player"
+      "name": "Yume Fernandes",
+      "discord": "yume_fernandes",
+      "flags": {}
     }
   ],
+  "esmodules": [
+    "setup.js"
+  ],
   "packs": [
+    {
+      "name": "fichas",
+      "label": "fichas",
+      "path": "packs/fichas",
+      "type": "Actor",
+      "system": "custom-system-builder",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "scripts",
+      "label": "scripts",
+      "path": "packs/scripts",
+      "type": "Macro",
+      "system": "custom-system-builder",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "vantagens",
+      "label": "Vantagens",
+      "path": "packs/vantagens",
+      "type": "Item",
+      "system": "custom-system-builder",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
     {
       "name": "items",
       "label": "items",
@@ -35,18 +89,29 @@
       }
     },
     {
-      "name": "fichas",
-      "label": "fichas",
-      "path": "packs/fichas",
-      "type": "Actor",
-      "system": "custom-system-builder",
+      "name": "acoes",
+      "label": "Ações",
+      "path": "packs/acoes",
+      "type": "Item",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      }
+      },
+      "system": "custom-system-builder"
+    },
+    {
+      "name": "regras",
+      "label": "Regras",
+      "path": "packs/regras",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "custom-system-builder"
     }
   ],
   "url": "https://github.com/Dehrangerz9/csb-remasters",
-  "manifest":"https://github.com/Dehrangerz9/csb-remasters/releases/download/stable/module.json",
+  "manifest": "https://github.com/Dehrangerz9/csb-remasters/releases/download/stable/module.json",
   "download": "https://github.com/Dehrangerz9/csb-remasters/archive/refs/tags/stable.zip"
 }

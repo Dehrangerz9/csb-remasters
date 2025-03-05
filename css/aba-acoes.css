@@ -1,0 +1,8 @@
+.item-container-ataques > table .custom-system-dynamicRow {
+    display: flex;
+    align-items: center;
+}
+
+.item-container-ataques > table .custom-system-dynamicRow td:last-child {
+    margin-left: auto;
+}
