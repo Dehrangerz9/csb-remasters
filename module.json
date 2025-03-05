@@ -112,6 +112,6 @@
     }
   ],
   "url": "https://github.com/Dehrangerz9/csb-remasters",
-  "manifest": "https://github.com/Dehrangerz9/csb-remasters/releases/download/stable/module.json",
-  "download": "https://github.com/Dehrangerz9/csb-remasters/archive/refs/tags/stable.zip"
+  "manifest": "https://raw.githubusercontent.com/Dehrangerz9/csb-remasters/main/module.json",
+  "download": "https://github.com/Dehrangerz9/csb-remasters/releases/latest/download/csb-remasters.zip"
 }
