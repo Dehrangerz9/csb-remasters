@@ -1,17 +1,27 @@
 /**
- * This is the entry file for the FoundryVTT module to add the Remasters RPG to Custom System Builder
- * @author Yume Fernandes
+ * Este é o arquivo de entrada para o módulo FoundryVTT que adiciona o Remasters RPG ao Custom System Builder
+ * @autor Yume Fernandes
  */
 
-
-/** Hook to register settings */
-
+/** Hook para registrar configurações */
 Hooks.once('init', function(){
-    console.log('Remasters CSB | Initializing module');
+    console.log('Remasters CSB | Inicializando módulo');
+
+    // Registrar a configuração "Sobrepor condições"
+    game.settings.register('csb-remasters', 'sobreporCondicoes', {
+        name: 'Sobrepor condições',
+        hint: 'Se ativado, o módulo substituirá as condições padrão. Caso contrário, adicionará às existentes.',
+        scope: 'world',
+        config: true,
+        type: Boolean,
+        default: true
+    });
 });
 
-Hooks.once('ready',async function(){
-    CONFIG.statusEffects = [
+/** Hook para aplicar as condições após a inicialização */
+Hooks.once('ready', async function(){
+    // Definir as novas condições
+    const novasCondicoes = [
         {
             id: 'atordoado',
             name: 'Atordoado',
@@ -109,7 +119,7 @@ Hooks.once('ready',async function(){
         },
         {
             id: 'desprevinido',
-            name: 'Desprevinido',
+            name: 'Desprevenido',
             icon: 'modules/csb-remasters/assets/icons/desprevinido.png'
         },
         {
@@ -123,7 +133,7 @@ Hooks.once('ready',async function(){
             icon: 'modules/csb-remasters/assets/icons/invisivel.png'
         },
         {
-            id: 'indetecado',
+            id: 'indetectado',
             name: 'Indetectado',
             icon: 'modules/csb-remasters/assets/icons/indetectado.png'
         },
@@ -151,6 +161,27 @@ Hooks.once('ready',async function(){
             id: 'fadigado',
             name: 'Fadigado',
             icon: 'modules/csb-remasters/assets/icons/fadigado.png'
+        },
+        {
+            id: 'morto',
+            name: 'Morto',
+            icon: 'icons/svg/skull.svg'
         }
     ];
+
+    // Verificar o valor da configuração "Sobrepor condições"
+    const sobrepor = game.settings.get('csb-remasters', 'sobreporCondicoes');
+
+    if (sobrepor) {
+        // Substituir as condições existentes
+        CONFIG.statusEffects = novasCondicoes;
+    } else {
+        // Adicionar novas condições às existentes, evitando duplicatas
+        const idsExistentes = new Set(CONFIG.statusEffects.map(e => e.id));
+        for (const condicao of novasCondicoes) {
+            if (!idsExistentes.has(condicao.id)) {
+                CONFIG.statusEffects.push(condicao);
+            }
+        }
+    }
 });

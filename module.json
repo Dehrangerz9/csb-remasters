@@ -1,7 +1,7 @@
 {
   "id": "csb-remasters",
   "title": "CSB-Remasters",
-  "version": "2.0",
+  "version": "2.0.2",
   "compatibility": {
     "minimum": "11",
     "verified": "12"
@@ -11,7 +11,10 @@
       {
         "id": "custom-system-builder",
         "type": "system",
-        "compatibility": {}
+        "manifest": "https://gitlab.com/custom-system-builder/custom-system-builder/-/releases/permalink/latest/downloads/system.json",
+        "compatibility": {
+          "verified": "4.4.2"
+        }
       },
       {
         "id": "custom-system-builder-unstable",
@@ -44,17 +47,6 @@
     "setup.js"
   ],
   "packs": [
-    {
-      "name": "fichas",
-      "label": "fichas",
-      "path": "packs/fichas",
-      "type": "Actor",
-      "system": "custom-system-builder",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
     {
       "name": "scripts",
       "label": "scripts",
@@ -93,22 +85,44 @@
       "label": "Ações",
       "path": "packs/acoes",
       "type": "Item",
+      "system": "custom-system-builder",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "system": "custom-system-builder"
+      }
     },
     {
       "name": "regras",
       "label": "Regras",
       "path": "packs/regras",
       "type": "JournalEntry",
+      "system": "custom-system-builder",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      },
-      "system": "custom-system-builder"
+      }
+    },
+    {
+      "name": "templates-de-item",
+      "label": "Templates De Item",
+      "path": "packs/templates-de-item",
+      "type": "Adventure",
+      "system": "custom-system-builder",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "inimigos",
+      "label": "Inimigos",
+      "path": "packs/inimigos",
+      "type": "Actor",
+      "system": "custom-system-builder",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "url": "https://github.com/Dehrangerz9/csb-remasters",
